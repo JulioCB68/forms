@@ -20,8 +20,8 @@ import {
 export function Sidebar() {
   return (
     <>
-      <aside className="hidden border-r bg-muted/40 md:block">
-        <div className="flex h-full max-h-screen flex-col gap-2">
+      <aside className="hidden h-full border-r bg-muted/40 md:block">
+        <div className="flex h-full flex-col gap-2">
           <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
             <Link href="/" className="flex items-center gap-2 font-semibold">
               <Bolt className="h-6 w-6 text-violet-800" />
@@ -47,7 +47,7 @@ export function Sidebar() {
         </div>
       </aside>
 
-      <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 md:hidden lg:h-[60px] lg:px-6">
+      <header className="flex items-center gap-4 border-b bg-muted/40 px-4 md:hidden lg:h-[60px] lg:px-6">
         <Sheet>
           <SheetTrigger asChild>
             <Button

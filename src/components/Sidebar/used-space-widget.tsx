@@ -10,7 +10,7 @@ import {
 export function UsedSpaceWidget() {
   return (
     <Card
-      x-chunk="dashboard-02-chunk-0"
+      x-chunk="mt-auto"
       className="flex flex-col gap-4 rounded-lg bg-violet-50 px-4 py-5"
     >
       <CardHeader className="space-y-1 p-0">
