@@ -21,6 +21,7 @@ import { useFileInput } from '@/context/file-input-context'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Mail, UploadCloud, User } from 'lucide-react'
 import Link from 'next/link'
+import { languages } from './langugages'
 
 export type ControlProps = ComponentProps<'input'>
 
@@ -182,10 +183,11 @@ export default function SettingsForm({ multiple = false }: ControlProps) {
             <SelectValue placeholder="Select language" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="en">English</SelectItem>
-            <SelectItem value="es">Español</SelectItem>
-            <SelectItem value="fr">Français</SelectItem>
-            <SelectItem value="de">Deutsch</SelectItem>
+            {languages.map((language) => (
+              <SelectItem key={language.code} value={language.code}>
+                {language.name}
+              </SelectItem>
+            ))}
           </SelectContent>
         </Select>
       </div>
